@@ -1,0 +1,12 @@
+---
+applications:   
+- name: mongodb-machine
+  memory: 128M
+  disk_quota: 512M
+  instances: 1
+  buildpack: nodejs_buildpack
+  health-check-type: http
+  timeout: 30
+  services:
+   - mongodb
+   - p-rabbitmq
